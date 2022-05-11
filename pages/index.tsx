@@ -23,7 +23,6 @@ const Home: NextPage = () => {
 					<Button variant="success" className="me-2">Success</Button>
 					<Button variant="info" className="me-2">Info</Button>
 					<Button variant="dark" className="me-2">Dark</Button>
-					<Button variant="light" className="me-2">Light</Button>
 				</div>
 
 				<div className="mt-3">
@@ -34,7 +33,6 @@ const Home: NextPage = () => {
 					<Button variant="success" className="me-2" disabled>Success</Button>
 					<Button variant="info" className="me-2" disabled>Info</Button>
 					<Button variant="dark" className="me-2" disabled>Dark</Button>
-					<Button variant="light" className="me-2" disabled>Light</Button>
 				</div>
 
 				<div className="mt-3">
@@ -45,7 +43,6 @@ const Home: NextPage = () => {
 					<Button variant="outline-success" className="me-2">Success</Button>
 					<Button variant="outline-info" className="me-2">Info</Button>
 					<Button variant="outline-dark" className="me-2">Dark</Button>
-					<Button variant="outline-light" className="me-2">Light</Button>
 				</div>
 
 				<div className="mt-3">
@@ -56,7 +53,6 @@ const Home: NextPage = () => {
 					<Button variant="outline-success" className="me-2" disabled>Success</Button>
 					<Button variant="outline-info" className="me-2" disabled>Info</Button>
 					<Button variant="outline-dark" className="me-2" disabled>Dark</Button>
-					<Button variant="outline-light" className="me-2" disabled>Light</Button>
 				</div>
 
 				<form className="pt-4">

@@ -20,6 +20,7 @@ $btn-padding-y: 0.3rem;
 $btn-padding-x: 0.9rem;
 $input-padding-y: 0.3rem;
 $input-padding-x: 0.7rem;
+$btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, opacity 0.15s ease-in-out;
 
 @import "../vendor/bootstrap5/bootstrap.scss";
 
@@ -35,13 +36,15 @@ $input-padding-x: 0.7rem;
 	$active-border: $color,
 	$active-color: color-contrast($active-background)
 ) {
-	&:hover {
-		color: darken($color, 15%);
+	color: darken($color, 5%);
+	&:hover,
+	&:focus {
+		color: darken($color, 10%);
 		background-color: rgba($color, 0.1);
 		border-color: darken($color, 10%);
 	}
 	&:active {
-		color: darken($color, 20%);
+		color: darken($color, 15%);
 		background-color: rgba($color, 0.2);
 		border-color: darken($color, 15%);
 		transition: none;
@@ -50,6 +53,7 @@ $input-padding-x: 0.7rem;
 
 html,
 html.dark-theme {
+	// Buttons:
 	.btn-primary,
 	.btn-danger,
 	.btn-warning,
@@ -71,6 +75,7 @@ html.dark-theme {
 		}
 		&:active {
 			opacity: 0.8;
+			transition: none;
 		}
 	}
 	.btn-primary {
@@ -89,19 +94,25 @@ html.dark-theme {
 		background: linear-gradient(45deg, #C49863, #D6AA75);
 	}
 	.btn-secondary {
-		color: $gray-900;
 		box-shadow: 0 0 0 1px $gray-400 inset;
+		&,
+		&:disabled,
+		&.disabled {
+			color: $gray-900;
+		}
 		&,
 		&:hover,
 		&:active,
 		&:focus,
-		&:active:focus {
+		&:active:focus,
+		&:disabled,
+		&.disabled {
 			background: transparent;
 		}
 		&:hover,
 		&:active,
 		&:focus,
-		&:active:focus  {
+		&:active:focus {
 			color: $primary;
 			box-shadow: 0 0 0 1px $primary inset;
 		}
@@ -115,13 +126,20 @@ html.dark-theme {
 			@include button-outline-variant-override($value);
 		}
 	}
+	.btn:disabled,
+	.btn.disabled,
+	fieldset:disabled .btn {
+		opacity: 0.7;
+		filter: grayscale(0.25);
+	}
 
+	// Forms:
 	.form-control {
 		background-color: transparent;
 	}
 }
 
-// Dark mode
+// Dark mode:
 html.dark-theme {
 	@import "./dark-mode.scss";
 }
