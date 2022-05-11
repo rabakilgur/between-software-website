@@ -15,6 +15,50 @@ const Home: NextPage = () => {
 				<Button variant="primary" className="me-2" onClick={() => setTheme("light")}>Light Theme</Button>
 				<Button variant="secondary" onClick={() => setTheme("dark")}>Dark Theme</Button>
 
+				<div className="mt-3">
+					<Button variant="primary" className="me-2">Primary</Button>
+					<Button variant="secondary" className="me-2">Secondary</Button>
+					<Button variant="danger" className="me-2">Danger</Button>
+					<Button variant="warning" className="me-2">Warning</Button>
+					<Button variant="success" className="me-2">Success</Button>
+					<Button variant="info" className="me-2">Info</Button>
+					<Button variant="dark" className="me-2">Dark</Button>
+					<Button variant="light" className="me-2">Light</Button>
+				</div>
+
+				<div className="mt-3">
+					<Button variant="primary" className="me-2" disabled>Primary</Button>
+					<Button variant="secondary" className="me-2" disabled>Secondary</Button>
+					<Button variant="danger" className="me-2" disabled>Danger</Button>
+					<Button variant="warning" className="me-2" disabled>Warning</Button>
+					<Button variant="success" className="me-2" disabled>Success</Button>
+					<Button variant="info" className="me-2" disabled>Info</Button>
+					<Button variant="dark" className="me-2" disabled>Dark</Button>
+					<Button variant="light" className="me-2" disabled>Light</Button>
+				</div>
+
+				<div className="mt-3">
+					<Button variant="outline-primary" className="me-2">Primary</Button>
+					<Button variant="outline-secondary" className="me-2">Secondary</Button>
+					<Button variant="outline-danger" className="me-2">Danger</Button>
+					<Button variant="outline-warning" className="me-2">Warning</Button>
+					<Button variant="outline-success" className="me-2">Success</Button>
+					<Button variant="outline-info" className="me-2">Info</Button>
+					<Button variant="outline-dark" className="me-2">Dark</Button>
+					<Button variant="outline-light" className="me-2">Light</Button>
+				</div>
+
+				<div className="mt-3">
+					<Button variant="outline-primary" className="me-2" disabled>Primary</Button>
+					<Button variant="outline-secondary" className="me-2" disabled>Secondary</Button>
+					<Button variant="outline-danger" className="me-2" disabled>Danger</Button>
+					<Button variant="outline-warning" className="me-2" disabled>Warning</Button>
+					<Button variant="outline-success" className="me-2" disabled>Success</Button>
+					<Button variant="outline-info" className="me-2" disabled>Info</Button>
+					<Button variant="outline-dark" className="me-2" disabled>Dark</Button>
+					<Button variant="outline-light" className="me-2" disabled>Light</Button>
+				</div>
+
 				<form className="pt-4">
 					<div className="form-group row">
 						<label htmlFor="staticEmail" className="col-sm-2 col-form-label">Email</label>

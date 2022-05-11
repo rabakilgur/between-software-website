@@ -25,21 +25,68 @@ $input-padding-x: 0.7rem;
 
 // Exposing the newly added SCSS varables as CSS variables:
 :root {
-	--petrol: #{$petrol};
 	--brown: #{$brown};
-	--cobalt: #{$cobalt};
+}
+
+@mixin button-outline-variant-override(
+	$color,
+	$color-hover: color-contrast($color),
+	$active-background: $color,
+	$active-border: $color,
+	$active-color: color-contrast($active-background)
+) {
+	&:hover {
+		color: darken($color, 15%);
+		background-color: rgba($color, 0.1);
+		border-color: darken($color, 10%);
+	}
+	&:active {
+		color: darken($color, 20%);
+		background-color: rgba($color, 0.2);
+		border-color: darken($color, 15%);
+		transition: none;
+	}
 }
 
 html,
 html.dark-theme {
-	.btn-primary {
-		text-shadow: 0 1px 2px rgb(0 0 0 / 12%);
+	.btn-primary,
+	.btn-danger,
+	.btn-warning,
+	.btn-success,
+	.btn-info,
+	.btn-dark {
 		&,
 		&:hover,
 		&:active,
-		&:focus {
+		&:focus,
+		&:disabled,
+		&.disabled {
 			color: white;
+			text-shadow: 0 1px 2px rgb(0 0 0 / 12%);
 		}
+		&:hover,
+		&:focus {
+			opacity: 0.9;
+		}
+		&:active {
+			opacity: 0.8;
+		}
+	}
+	.btn-primary {
+		background: linear-gradient(45deg, #0170FE, #0088FF);
+	}
+	.btn-danger {
+		background: linear-gradient(45deg, #E84C3D, #FF4E3F);
+	}
+	.btn-warning {
+		background: linear-gradient(45deg, #F5AF41, #F1C40F);
+	}
+	.btn-success {
+		background: linear-gradient(45deg, #00BA47, #00D65D);
+	}
+	.btn-info {
+		background: linear-gradient(45deg, #C49863, #D6AA75);
 	}
 	.btn-secondary {
 		color: $gray-900;
@@ -62,6 +109,13 @@ html.dark-theme {
 			opacity: 0.85;
 		}
 	}
+	@each $color, $value in $theme-colors {
+		.btn-outline-#{$color} {
+			border-width: 1px;
+			@include button-outline-variant-override($value);
+		}
+	}
+
 	.form-control {
 		background-color: transparent;
 	}
