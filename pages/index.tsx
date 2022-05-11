@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Button } from "react-bootstrap";
+import { Button, ButtonToolbar } from "react-bootstrap";
 import useDarkMode from "../lib/use-dark-mode";
 
 const Home: NextPage = () => {
@@ -11,33 +11,36 @@ const Home: NextPage = () => {
 			<Head>
 				<title>Between Software</title>
 			</Head>
-			<div>
-				<a className="logo-wrapper" href="./">
-					<i className="logo"></i>
-					<span>Between Software</span>
-				</a>
-				<Button variant="primary" onClick={() => setTheme("light")}>Light Theme</Button>
+			<div className="p-4">
+				<Button variant="primary" className="me-2" onClick={() => setTheme("light")}>Light Theme</Button>
 				<Button variant="secondary" onClick={() => setTheme("dark")}>Dark Theme</Button>
-			</div>
-			<form>
-			<div className="mb-3">
-				<label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-				<input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-				<div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
-			</div>
-			<div className="mb-3">
-				<label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-				<input type="password" className="form-control" id="exampleInputPassword1" />
-			</div>
-			<div className="mb-3 form-check">
-				<input type="checkbox" className="form-check-input" id="exampleCheck1" />
-				<label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
-			</div>
-			<button type="submit" className="btn btn-primary">Submit</button>
-			</form>
-			<header className="show-shadow">
 
-			</header>
+				<form className="pt-4">
+					<div className="form-group row">
+						<label htmlFor="staticEmail" className="col-sm-2 col-form-label">Email</label>
+						<div className="col-sm-10">
+							<input type="text" className="form-control" />
+						</div>
+					</div>
+					<div className="form-group row mt-2">
+						<label htmlFor="inputPassword" className="col-sm-2 col-form-label">Passwort</label>
+						<div className="col-sm-10">
+							<input type="password" className="form-control"placeholder="Password" />
+						</div>
+					</div>
+					<div className="form-group row justify-content-end mt-2">
+						<div className="col-sm-10">
+							<input type="checkbox" className="form-check-input me-2" id="exampleCheck1" />
+							<label className="form-check-label" htmlFor="exampleCheck1">Zugangsdaten merken</label>
+						</div>
+					</div>
+					<div className="form-group row justify-content-end mt-3">
+						<div className="col-sm-10">
+							<button type="submit" className="btn btn-primary">Submit</button>
+						</div>
+					</div>
+				</form>
+			</div>
 		</>
 	);
 };

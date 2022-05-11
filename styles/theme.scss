@@ -30,33 +30,44 @@ $input-padding-x: 0.7rem;
 	--cobalt: #{$cobalt};
 }
 
-.btn-primary {
-	text-shadow: 0 1px 2px rgb(0 0 0 / 12%);
-	&,
-	&:hover,
-	&:active,
-	&:focus {
-		color: white;
+html,
+html.dark-theme {
+	.btn-primary {
+		text-shadow: 0 1px 2px rgb(0 0 0 / 12%);
+		&,
+		&:hover,
+		&:active,
+		&:focus {
+			color: white;
+		}
+	}
+	.btn-secondary {
+		color: $gray-900;
+		box-shadow: 0 0 0 1px $gray-400 inset;
+		&,
+		&:hover,
+		&:active,
+		&:focus,
+		&:active:focus {
+			background: transparent;
+		}
+		&:hover,
+		&:active,
+		&:focus,
+		&:active:focus  {
+			color: $primary;
+			box-shadow: 0 0 0 1px $primary inset;
+		}
+		&:active {
+			opacity: 0.85;
+		}
+	}
+	.form-control {
+		background-color: transparent;
 	}
 }
-.btn-secondary {
-	color: $gray-900;
-	box-shadow: 0 0 0 1px $gray-400 inset;
-	&,
-	&:hover,
-	&:active,
-	&:focus,
-	&:active:focus {
-		background: transparent;
-	}
-	&:hover,
-	&:active,
-	&:focus,
-	&:active:focus  {
-		color: $primary;
-		box-shadow: 0 0 0 1px $primary inset;
-	}
-	&:active {
-		opacity: 0.85;
-	}
+
+// Dark mode
+html.dark-theme {
+	@import "./dark-mode.scss";
 }
