@@ -13,20 +13,18 @@ $black:		#000;
 
 // Bootstrap colors:
 $blue:		#0088FF;	// Default: #007bff;
-//$indigo:	#6610f2;	// Default: #6610f2;
-$purple:	#864B85;	// Default: #6f42c1;
-//$pink:		#e83e8c;	// Default: #e83e8c;
-$red:		#CF4A40;	// Default: #dc3545;
-$orange:	#FF8400;	// Default: #fd7e14;
-$yellow:	#FFBA00;	// Default: #ffc107;
-$green:		#7CB13B;	// Default: #28a745;
-//$teal:		#20c997;	// Default: #20c997;
-$cyan:		#00AEC1;	// Default: #17a2b8;
+$indigo:	#6610f2;		// Default: #6610f2;
+$purple:	#CA00EF;	// Default: #6f42c1;
+$pink:		#e83e8c;		// Default: #e83e8c;
+$red:		#F44D3E;	// Default: #dc3545;
+$orange:	#FF6B29;	// Default: #fd7e14;
+$yellow:	#F3B929;	// Default: #ffc107;
+$green:		#00C852;	// Default: #28a745;
+$teal:		#20c997;		// Default: #20c997;
+$cyan:		#17a2b8;		// Default: #17a2b8;
 
 // Custom colors:
-$petrol:	#007383;
-$brown:		#87613D;
-$cobalt:	#4163C6;
+$brown:		#CDA16C;
 
 // Bootstrap theme colors:
 $primary:	$blue;		// Default: #007bff
@@ -35,7 +33,7 @@ $tertiary:	$gray-600;	// Custom theme color
 $success:	$green;		// Default: #28a745
 $danger:	$red;		// Default: #dc3545
 $warning:	$yellow;	// Default: #ffc107
-$info:		$cyan;		// Default: #17a2b8
+$info:		$brown;		// Default: #17a2b8
 $light:		$gray-100;	// Default: #f8f9fa | equal to gray-100
 $dark:		$gray-800;	// Default: #343a40 | equal to gray-800
 
@@ -46,7 +44,7 @@ $brand-darker2: darken($brand, 20%);
 $brand-lighter: lighten($brand, 10%);
 $brand-brighter: saturate(lighten($brand, 10%), 25%);
 
-$color-names: "primary", "secondary", "info", "success", "danger", "warning", "light", "dark", "gray-100", "gray-200", "gray-300", "gray-400", "gray-500", "gray-600", "gray-700", "gray-800", "gray-900", "blue", "orange", "petrol", "green", "yellow", "red", "brown", "purple", "cobalt", "cyan", "black", "white";
+$color-names: "primary", "secondary", "info", "success", "danger", "warning", "light", "dark", "gray-100", "gray-200", "gray-300", "gray-400", "gray-500", "gray-600", "gray-700", "gray-800", "gray-900", "blue", "orange", "green", "yellow", "red", "brown", "purple", "cyan", "black", "white";
 $btn-types: "primary", "secondary", "tertiary", "info", "success", "danger", "warning", "light", "dark";
 $color-map: (  // This map can be used to reference colors dynamically by their name
 	"white": $white,
@@ -78,9 +76,7 @@ $color-map: (  // This map can be used to reference colors dynamically by their 
 	"yellow": $yellow,
 	"green": $green,
 	"cyan": $cyan,
-	"petrol": $petrol,
 	"brown": $brown,
-	"cobalt": $cobalt,
 
 	"brand": $brand
 );
