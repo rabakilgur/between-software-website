@@ -29,32 +29,18 @@ $btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, bo
 	--brown: #{$brown};
 }
 
-@mixin button-outline-variant-override(
-	$color,
-	$color-hover: color-contrast($color),
-	$active-background: $color,
-	$active-border: $color,
-	$active-color: color-contrast($active-background)
-) {
-	color: darken($color, 5%);
-	&:hover,
-	&:focus {
-		color: darken($color, 10%);
-		background-color: rgba($color, 0.1);
-		border-color: darken($color, 10%);
-	}
-	&:active {
-		color: darken($color, 15%);
-		background-color: rgba($color, 0.2);
-		border-color: darken($color, 15%);
-		transition: none;
-	}
-}
-
 html,
-html.dark-theme {
+.dark-theme,
+html.dark-theme .light-theme {
+	.bg {
+		background: $white;
+	}
+	.color {
+		color: $black;
+	}
 	// Buttons:
 	.btn-primary,
+	.btn-secondary,
 	.btn-danger,
 	.btn-warning,
 	.btn-success,
@@ -78,14 +64,31 @@ html.dark-theme {
 			transition: none;
 		}
 	}
+	.btn-danger,
+	.btn-warning,
+	.btn-success,
+	.btn-info {
+		&,
+		&:hover,
+		&:active,
+		&:focus,
+		&:disabled,
+		&.disabled {
+			text-shadow: 0 1px 2px rgb(0 0 0 / 12%), 0 0 8px rgb(0 0 0 / 24%);
+		}
+	}
 	.btn-primary {
 		background: linear-gradient(45deg, #0170FE, #0088FF);
+	}
+	.btn-secondary {
+		background: linear-gradient(45deg, #444444, #535353);
 	}
 	.btn-danger {
 		background: linear-gradient(45deg, #E84C3D, #FF4E3F);
 	}
 	.btn-warning {
-		background: linear-gradient(45deg, #F5AF41, #F1C40F);
+		//background: linear-gradient(45deg, #F5AF41, #F1C40F);
+		background: linear-gradient(45deg, darken(#F5AF41, 3%), darken(#F1C40F, 3%));
 	}
 	.btn-success {
 		background: linear-gradient(45deg, #00BA47, #00D65D);
@@ -93,37 +96,59 @@ html.dark-theme {
 	.btn-info {
 		background: linear-gradient(45deg, #C49863, #D6AA75);
 	}
-	.btn-secondary {
-		box-shadow: 0 0 0 1px $gray-400 inset;
-		&,
-		&:disabled,
-		&.disabled {
-			color: $gray-900;
-		}
-		&,
-		&:hover,
-		&:active,
-		&:focus,
-		&:active:focus,
-		&:disabled,
-		&.disabled {
-			background: transparent;
-		}
-		&:hover,
-		&:active,
-		&:focus,
-		&:active:focus {
-			color: $primary;
-			box-shadow: 0 0 0 1px $primary inset;
-		}
-		&:active {
-			opacity: 0.85;
-		}
-	}
+	// .btn-secondary {
+	// 	box-shadow: 0 0 0 1px $gray-400 inset;
+	// 	&,
+	// 	&:disabled,
+	// 	&.disabled {
+	// 		color: $gray-900;
+	// 	}
+	// 	&,
+	// 	&:hover,
+	// 	&:active,
+	// 	&:focus,
+	// 	&:active:focus,
+	// 	&:disabled,
+	// 	&.disabled {
+	// 		background: transparent;
+	// 	}
+	// 	&:hover,
+	// 	&:active,
+	// 	&:focus,
+	// 	&:active:focus {
+	// 		color: $primary;
+	// 		box-shadow: 0 0 0 1px $primary inset;
+	// 	}
+	// 	&:active {
+	// 		opacity: 0.85;
+	// 	}
+	// }
 	@each $color, $value in $theme-colors {
 		.btn-outline-#{$color} {
 			border-width: 1px;
-			@include button-outline-variant-override($value);
+			color: darken($value, 5%);
+			&:hover,
+			&:focus {
+				color: darken($value, 10%);
+				background-color: rgba($value, 0.1);
+				border-color: darken($value, 10%);
+			}
+			&:active {
+				color: darken($value, 15%);
+				background-color: rgba($value, 0.2);
+				border-color: darken($value, 15%);
+				transition: none;
+			}
+		}
+	}
+	.btn-outline-secondary {
+		border-color: $gray-500;
+		&:hover,
+		&:focus {
+			border-color: darken($gray-500, 10%);
+		}
+		&:active {
+			border-color: darken($gray-500, 15%);
 		}
 	}
 	.btn:disabled,
@@ -131,6 +156,17 @@ html.dark-theme {
 	fieldset:disabled .btn {
 		opacity: 0.7;
 		filter: grayscale(0.25);
+	}
+	.btn-icon {
+		display: flex;
+		padding: 0;
+		height: calc(1.5em + 2 * $input-padding-y );
+		width: calc(1.5em + 2 * $input-padding-y );
+		align-items: center;
+		justify-content: center;
+	}
+	.btn-row > .btn + .btn {
+		margin-left: 0.5rem;
 	}
 
 	// Forms:
@@ -140,6 +176,6 @@ html.dark-theme {
 }
 
 // Dark mode:
-html.dark-theme {
+.dark-theme {
 	@import "./dark-mode.scss";
 }

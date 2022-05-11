@@ -1,14 +1,16 @@
+@use "sass:color";
+
 // Bootstrap grays:
 $white:		#fff;
-$gray-100:	#F9F9F9;	// Default: #F8F9FA
-$gray-200:	#ECECEC;	// Default: #E9ECEF
-$gray-300:	#E1E1E1;	// Default: #DEE2E6
-$gray-400:	#D3D3D3;	// Default: #CED4DA
-$gray-500:	#B4B4B4;	// Default: #ADB5BD
-$gray-600:	#747474;	// Default: #6C757D
-$gray-700:	#4F4F4F;	// Default: #495057
-$gray-800:	#393939;	// Default: #343A40
-$gray-900:	#242424;	// Default: #212529
+$gray-100:	color.scale(#F8F9FA, $saturation: -50%);	// Default: #F8F9FA
+$gray-200:	color.scale(#E9ECEF, $saturation: -50%);	// Default: #E9ECEF
+$gray-300:	color.scale(#DEE2E6, $saturation: -50%);	// Default: #DEE2E6
+$gray-400:	color.scale(#CED4DA, $saturation: -50%);	// Default: #CED4DA
+$gray-500:	color.scale(#ADB5BD, $saturation: -50%);	// Default: #ADB5BD
+$gray-600:	color.scale(#6C757D, $saturation: -50%);	// Default: #6C757D
+$gray-700:	color.scale(#495057, $saturation: -50%);	// Default: #495057
+$gray-800:	color.scale(#343A40, $saturation: -50%);	// Default: #343A40
+$gray-900:	color.scale(#212529, $saturation: -50%);	// Default: #212529
 $black:		#000;
 
 // Bootstrap colors:

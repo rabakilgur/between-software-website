@@ -1,18 +1,64 @@
+html,
 body {
 	background: $gray-900;
 	color: $white;
 }
-.btn-secondary {
-	color: $gray-100;
-	box-shadow: 0 0 0 1px $gray-600 inset;
+.bg {
+	background: $gray-900;
 }
+.color {
+	color: $white;
+}
+
+// .btn-secondary {
+// 	&,
+// 	&:disabled,
+// 	&.disabled {
+// 		color: $gray-100;
+// 	}
+// 	box-shadow: 0 0 0 1px $gray-600 inset;
+// }
+
+@each $color, $value in $theme-colors {
+	.btn-outline-#{$color} {
+		color: lighten($value, 5%);
+		&:hover,
+		&:focus {
+			color: lighten($value, 10%);
+			background-color: rgba($value, 0.1);
+			border-color: lighten($value, 10%);
+		}
+		&:active {
+			color: lighten($value, 15%);
+			background-color: rgba($value, 0.2);
+			border-color: lighten($value, 15%);
+			transition: none;
+		}
+	}
+}
+.btn-outline-secondary {
+	color: $gray-100;
+	border-color: $gray-600;
+	&:hover,
+	&:focus {
+		color: lighten($gray-100, 10%);
+		background-color: rgba($white, 0.05);
+		border-color: lighten($gray-600, 10%);
+	}
+	&:active {
+		color: lighten($gray-100, 15%);
+		background-color: rgba($white, 0.1);
+		border-color: lighten($gray-600, 15%);
+	}
+}
+
 .form-control,
 .form-check-input:not(:checked) {
-	background-color: rgba(255, 255, 255, 0.04);
+	background-color: rgba(255, 255, 255, 0.03);
 	color: $white;
 	border-color: #111111;
 	&:hover {
-		background-color: rgba(255, 255, 255, 0.05);
+		background-color: rgba(255, 255, 255, 0.04);
 	}
 	&:focus {
 		border-color: $primary;
