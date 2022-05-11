@@ -9,8 +9,8 @@ function useDarkMode(): ["dark"|"light", React.Dispatch<React.SetStateAction<str
 	useEffect(() => {
 		const root = window.document.documentElement;
 
-		root.classList.remove(colorTheme);
-		root.classList.add(theme);
+		root.classList.remove(colorTheme + "-theme");
+		root.classList.add(theme + "-theme");
 
 		if (typeof window !== "undefined") localStorage.setItem("theme", theme);
 	}, [theme]);

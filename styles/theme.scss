@@ -1,0 +1,62 @@
+@import "./constants.scss";
+
+// Bootstrap settings and general variables:
+$enable-rounded: true;
+$enable-reduced-motion: false;
+$enable-negative-margins: true;
+$variable-prefix: "";
+$border-width: 0;
+$input-border-width: 1px;
+$input-btn-focus-width: 0;
+$btn-focus-width: 0;
+$input-focus-width: 0;
+$input-btn-focus-box-shadow: none;
+$btn-focus-box-shadow: none;
+$input-focus-box-shadow: none;
+$btn-border-radius:		$border-radius;
+$btn-border-radius-sm:	$border-radius-sm;
+$btn-border-radius-lg:	$border-radius-lg;
+$btn-padding-y: 0.3rem;
+$btn-padding-x: 0.9rem;
+$input-padding-y: 0.3rem;
+$input-padding-x: 0.7rem;
+
+@import "../vendor/bootstrap5/bootstrap.scss";
+
+// Exposing the newly added SCSS varables as CSS variables:
+:root {
+	--petrol: #{$petrol};
+	--brown: #{$brown};
+	--cobalt: #{$cobalt};
+}
+
+.btn-primary {
+	text-shadow: 0 1px 2px rgb(0 0 0 / 12%);
+	&,
+	&:hover,
+	&:active,
+	&:focus {
+		color: white;
+	}
+}
+.btn-secondary {
+	color: $gray-900;
+	box-shadow: 0 0 0 1px $gray-400 inset;
+	&,
+	&:hover,
+	&:active,
+	&:focus,
+	&:active:focus {
+		background: transparent;
+	}
+	&:hover,
+	&:active,
+	&:focus,
+	&:active:focus  {
+		color: $primary;
+		box-shadow: 0 0 0 1px $primary inset;
+	}
+	&:active {
+		opacity: 0.85;
+	}
+}
