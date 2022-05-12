@@ -15,10 +15,6 @@ export const AppContext = React.createContext({
 function App({ Component, pageProps }: AppProps) {
 	const [theme, setTheme] = useDarkMode();
 
-	useEffect(() => {
-			console.log(theme);
-	});
-
 	return (
 		<AppContext.Provider value={{ theme, setTheme }}>
 			<Component {...pageProps} />
