@@ -20,7 +20,7 @@ $btn-padding-y: 0.3rem;
 $btn-padding-x: 0.9rem;
 $input-padding-y: 0.3rem;
 $input-padding-x: 0.7rem;
-$btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, opacity 0.15s ease-in-out;
+$btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, opacity 0.15s ease-in-out, filter 0.15s ease-in-out;
 
 @import "../vendor/bootstrap5/bootstrap.scss";
 
@@ -57,10 +57,10 @@ html.dark-theme .light-theme {
 		}
 		&:hover,
 		&:focus {
-			opacity: 0.9;
+			filter: brightness(0.9);
 		}
 		&:active {
-			opacity: 0.8;
+			filter: brightness(0.8);
 			transition: none;
 		}
 	}
@@ -96,33 +96,6 @@ html.dark-theme .light-theme {
 	.btn-info {
 		background: linear-gradient(45deg, #C49863, #D6AA75);
 	}
-	// .btn-secondary {
-	// 	box-shadow: 0 0 0 1px $gray-400 inset;
-	// 	&,
-	// 	&:disabled,
-	// 	&.disabled {
-	// 		color: $gray-900;
-	// 	}
-	// 	&,
-	// 	&:hover,
-	// 	&:active,
-	// 	&:focus,
-	// 	&:active:focus,
-	// 	&:disabled,
-	// 	&.disabled {
-	// 		background: transparent;
-	// 	}
-	// 	&:hover,
-	// 	&:active,
-	// 	&:focus,
-	// 	&:active:focus {
-	// 		color: $primary;
-	// 		box-shadow: 0 0 0 1px $primary inset;
-	// 	}
-	// 	&:active {
-	// 		opacity: 0.85;
-	// 	}
-	// }
 	@each $color, $value in $theme-colors {
 		.btn-outline-#{$color} {
 			border-width: 1px;
@@ -154,7 +127,7 @@ html.dark-theme .light-theme {
 	.btn:disabled,
 	.btn.disabled,
 	fieldset:disabled .btn {
-		opacity: 0.7;
+		opacity: 0.65;
 		filter: grayscale(0.25);
 	}
 	.btn-icon {

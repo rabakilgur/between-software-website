@@ -10,15 +10,6 @@ body {
 	color: $white;
 }
 
-// .btn-secondary {
-// 	&,
-// 	&:disabled,
-// 	&.disabled {
-// 		color: $gray-100;
-// 	}
-// 	box-shadow: 0 0 0 1px $gray-600 inset;
-// }
-
 @each $color, $value in $theme-colors {
 	.btn-outline-#{$color} {
 		color: lighten($value, 5%);
