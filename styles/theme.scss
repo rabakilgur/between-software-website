@@ -27,6 +27,7 @@ $btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, bo
 :root {
 	// Exposing the newly added SCSS varables as CSS variables:
 	--brown: #{$brown};
+	--black: #{$black};
 }
 
 html,
@@ -36,6 +37,7 @@ html.dark-theme .light-theme {
 	// Adding variables for the switching between light/dark shades in light-/dark-mode:
 	--shade: --dark;
 	--shade-rgb: var(--light-rgb, $light);
+	--shade-000: var(--white, $white);
 	--shade-100: var(--gray-100, $gray-100);
 	--shade-200: var(--gray-200, $gray-200);
 	--shade-300: var(--gray-300, $gray-300);
@@ -45,19 +47,35 @@ html.dark-theme .light-theme {
 	--shade-700: var(--gray-700, $gray-700);
 	--shade-800: var(--gray-800, $gray-800);
 	--shade-900: var(--gray-900, $gray-900);
-	.bg {
-		background: $white;
+	--shade-1000: var(--black, $black);
+	.text-theme {
+		color: $black !important;
 	}
-	.color {
-		color: $black;
+	.text-antitheme {
+		color: $white !important;
+	}
+	.bg-theme {
+		background: $white !important;
+	}
+	.bg-gray {
+		background-color: var(--gray) !important;
 	}
 	.bg-shade {
 		--bg-opacity: 1;
 		background-color: rgba(var(--shade-rgb), var(--bg-opacity)) !important;
 	}
-	@for $i from 1 through 9 {
+	.bg-shade-000 {
+		background-color: var(--shade-000) !important;
+	}
+	@for $i from 1 through 10 {
 		.bg-shade-#{$i*100} {
 			background-color: var(--shade-#{$i*100}) !important;
+		}
+		.bg-gray-#{$i*100} {
+			background-color: var(--gray-#{$i*100}) !important;
+		}
+		@each $color-name, $color-value in map-merge($color-map-colors, $color-map-brand) {
+			.bg-#{$color-name} { background-color: #{$color-value} !important; }
 		}
 	}
 
@@ -111,7 +129,7 @@ html.dark-theme .light-theme {
 	}
 	.btn-warning {
 		//background: linear-gradient(45deg, #F5AF41, #F1C40F);
-		background: linear-gradient(45deg, darken(#F5AF41, 3%), darken(#F1C40F, 3%));
+		background: linear-gradient(45deg, saturate(darken(#F5AF41, 3%), 5%), saturate(darken(#F1C40F, 3%), 5%));
 	}
 	.btn-success {
 		background: linear-gradient(45deg, #00BA47, #00D65D);

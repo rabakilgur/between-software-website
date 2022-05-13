@@ -205,6 +205,73 @@ const Design: NextPage = () => {
 								<Button variant="outline-light" className="me-2" disabled>Light</Button>
 							</div>
 
+							<h2 className="pt-4">Colors:</h2>
+							<h3>Grays:</h3>
+							<div className="row">
+								<div className="col-md-3 p-3 text-black bg-white">$white</div>
+								<div className="col-md-3 p-3 text-black bg-gray-100">$gray-100</div>
+								<div className="col-md-3 p-3 text-black bg-gray-200">$gray-200</div>
+								<div className="col-md-3 p-3 text-black bg-gray-300">$gray-300</div>
+								<div className="col-md-3 p-3 text-black bg-gray-400">$gray-400</div>
+								<div className="col-md-3 p-3 text-white bg-gray-500">$gray-500</div>
+								<div className="col-md-3 p-3 text-white bg-gray-600">$gray-600</div>
+								<div className="col-md-3 p-3 text-white bg-gray-700">$gray-700</div>
+								<div className="col-md-3 p-3 text-white bg-gray-800">$gray-800</div>
+								<div className="col-md-3 p-3 text-white bg-gray-900">$gray-900</div>
+								<div className="col-md-3 p-3 text-white bg-black">$black</div>
+								<div className="col-md-3 p-3 text-white bg-gray">$gray</div>
+							</div>
+							<h3 className="mt-3">General colors:</h3>
+							<div className="row">
+								<div className="col-md-3 p-3 text-white bg-blue">$blue</div>
+								<div className="col-md-3 p-3 text-white bg-indigo">$indigo</div>
+								<div className="col-md-3 p-3 text-white bg-purple">$purple</div>
+								<div className="col-md-3 p-3 text-white bg-pink">$pink</div>
+								<div className="col-md-3 p-3 text-white bg-red">$red</div>
+								<div className="col-md-3 p-3 text-white bg-orange">$orange</div>
+								<div className="col-md-3 p-3 text-white bg-yellow">$yellow</div>
+								<div className="col-md-3 p-3 text-white bg-green">$green</div>
+								<div className="col-md-3 p-3 text-white bg-teal">$teal</div>
+								<div className="col-md-3 p-3 text-white bg-cyan">$cyan</div>
+								<div className="col-md-3 p-3 text-white bg-brown">$brown</div>
+							</div>
+							<h3 className="mt-3">Theme colors:</h3>
+							<div className="row">
+								<div className="col-md-3 p-3 text-white bg-primary">$primary</div>
+								<div className="col-md-3 p-3 text-white bg-secondary">$secondary</div>
+								<div className="col-md-3 p-3 text-white bg-danger">$danger</div>
+								<div className="col-md-3 p-3 text-white bg-warning">$warning</div>
+								<div className="col-md-3 p-3 text-white bg-success">$success</div>
+								<div className="col-md-3 p-3 text-white bg-info">$info</div>
+								<div className="col-md-3 p-3 text-white bg-dark">$dark</div>
+								<div className="col-md-3 p-3 text-black bg-light">$light</div>
+							</div>
+							<h3 className="mt-3">Adaptive theme colors:</h3>
+							<i className="text-muted"><b>Note:</b> These are only available as CSS classes and not as SCSS variables</i>
+							<div className="row">
+								<div className="col-md-3 p-3 text-theme bg-theme">.bg-theme</div>
+								<div className="col-md-3 p-3 text-theme bg-shade">$shade</div>
+								<div className="col-md-3 p-3 text-theme bg-shade-000">$shade-000</div>
+								<div className="col-md-3 p-3 text-theme bg-shade-100">$shade-100</div>
+								<div className="col-md-3 p-3 text-theme bg-shade-200">$shade-200</div>
+								<div className="col-md-3 p-3 text-theme bg-shade-300">$shade-300</div>
+								<div className="col-md-3 p-3 text-theme bg-shade-400">$shade-400</div>
+								<div className="col-md-3 p-3 text-theme bg-shade-500">$shade-500</div>
+								<div className="col-md-3 p-3 text-antitheme bg-shade-600">$shade-600</div>
+								<div className="col-md-3 p-3 text-antitheme bg-shade-700">$shade-700</div>
+								<div className="col-md-3 p-3 text-antitheme bg-shade-800">$shade-800</div>
+								<div className="col-md-3 p-3 text-antitheme bg-shade-900">$shade-900</div>
+								<div className="col-md-3 p-3 text-antitheme bg-shade-900">$shade-1000</div>
+							</div>
+							<h3 className="mt-3">Brand colors:</h3>
+							<div className="row">
+								<div className="col-md-3 p-3 text-white bg-brand">$brand</div>
+								<div className="col-md-3 p-3 text-white bg-brand-darker">$brand-darker</div>
+								<div className="col-md-3 p-3 text-white bg-brand-darker2">$brand-darker2</div>
+								<div className="col-md-3 p-3 text-white bg-brand-lighter">$brand-lighter</div>
+								<div className="col-md-3 p-3 text-white bg-brand-brighter">$brand-brighter</div>
+							</div>
+
 							<h2 className="pt-4">Forms:</h2>
 							<form className="pt-4">
 								<h3>Typical Form:</h3>

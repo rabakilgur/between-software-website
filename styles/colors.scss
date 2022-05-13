@@ -12,6 +12,7 @@ $gray-700:	color.scale(#495057, $saturation: -50%);	// Default: #495057
 $gray-800:	color.scale(#343A40, $saturation: -50%);	// Default: #343A40
 $gray-900:	color.scale(#212529, $saturation: -50%);	// Default: #212529
 $black:		#000;
+$gray:		color.scale(#707579, $saturation: -50%);
 
 // Bootstrap colors:
 $blue:		#0088FF;	// Default: #007bff;
@@ -31,7 +32,6 @@ $brown:		#CDA16C;
 // Bootstrap theme colors:
 $primary:	$blue;		// Default: #007bff
 $secondary:	$gray-700;	// Default: #6c757d (old was #747374)
-$tertiary:	$gray-600;	// Custom theme color
 $success:	$green;		// Default: #28a745
 $danger:	$red;		// Default: #dc3545
 $warning:	$yellow;	// Default: #ffc107
@@ -47,8 +47,9 @@ $brand-lighter: lighten($brand, 10%);
 $brand-brighter: saturate(lighten($brand, 10%), 25%);
 
 $color-names: "primary", "secondary", "info", "success", "danger", "warning", "light", "dark", "gray-100", "gray-200", "gray-300", "gray-400", "gray-500", "gray-600", "gray-700", "gray-800", "gray-900", "blue", "orange", "green", "yellow", "red", "brown", "purple", "cyan", "black", "white";
-$btn-types: "primary", "secondary", "tertiary", "info", "success", "danger", "warning", "light", "dark";
-$color-map: (  // This map can be used to reference colors dynamically by their name
+$btn-types: "primary", "secondary", "info", "success", "danger", "warning", "light", "dark";
+// This map can be used to reference colors dynamically by their name
+$color-map: (
 	"white": $white,
 	"gray-100": $gray-100,
 	"gray-200": $gray-200,
@@ -61,24 +62,69 @@ $color-map: (  // This map can be used to reference colors dynamically by their 
 	"gray-900": $gray-900,
 	"black": $black,
 
-	"primary": $primary,
-	"secondary": $secondary,
-	"tertiary": $tertiary,
-	"info": $info,
-	"success": $success,
-	"danger": $danger,
-	"warning": $warning,
-	"light": $light,
-	"dark": $dark,
-
 	"blue": $blue,
+	"indigo": $indigo,
 	"purple": $purple,
+	"pink": $pink,
 	"red": $red,
 	"orange": $orange,
 	"yellow": $yellow,
 	"green": $green,
+	"teal": $teal,
 	"cyan": $cyan,
 	"brown": $brown,
 
+	"primary": $primary,
+	"secondary": $secondary,
+	"danger": $danger,
+	"warning": $warning,
+	"success": $success,
+	"info": $info,
+	"dark": $dark,
+	"light": $light,
+
 	"brand": $brand
+);
+$color-map-grays: (
+	"white": $white,
+	"gray-100": $gray-100,
+	"gray-200": $gray-200,
+	"gray-300": $gray-300,
+	"gray-400": $gray-400,
+	"gray-500": $gray-500,
+	"gray-600": $gray-600,
+	"gray-700": $gray-700,
+	"gray-800": $gray-800,
+	"gray-900": $gray-900,
+	"black": $black
+);
+$color-map-colors: (
+	"blue": $blue,
+	"indigo": $indigo,
+	"purple": $purple,
+	"pink": $pink,
+	"red": $red,
+	"orange": $orange,
+	"yellow": $yellow,
+	"green": $green,
+	"teal": $teal,
+	"cyan": $cyan,
+	"brown": $brown
+);
+$color-map-theme: (
+	"primary": $primary,
+	"secondary": $secondary,
+	"danger": $danger,
+	"warning": $warning,
+	"success": $success,
+	"info": $info,
+	"dark": $dark,
+	"light": $light,
+);
+$color-map-brand: (
+	"brand": $brand,
+	"brand-darker": $brand-darker,
+	"brand-darker2": $brand-darker2,
+	"brand-lighter": $brand-lighter,
+	"brand-brighter": $brand-brighter
 );
