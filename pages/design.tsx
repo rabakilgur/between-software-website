@@ -50,7 +50,7 @@ const Design: NextPage = () => {
 			<div className="container-fluid">
 				<div className="row" style={{ height: "100vh" }}>
 					<div className="col-lg-3 overflow-auto">
-						<div className="my-4 pt-2 pb-4 px-4 rounded bg-dark text-white">
+						<div className="my-4 pt-2 pb-4 px-4 rounded bg-shade">
 							<ul className="mb-0 ps-0" id="toc" style={{ lineHeight: "1.75" }}></ul>
 						</div>
 					</div>

@@ -12,7 +12,6 @@ const Home: NextPage = () => {
 				<ThemeToggle className="btn btn-icon btn-secondary rounded-pill" />
 				<h1 className="pt-4 text-center">In Arbeit...</h1>
 			</div>
-
 		</>
 	);
 };

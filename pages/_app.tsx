@@ -1,5 +1,5 @@
 import type { AppProps } from "next/app";
-import React, { Dispatch, SetStateAction, useEffect } from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import useDarkMode from "../lib/use-dark-mode";
 import "../styles/theme.scss";
 import "../styles/globals.scss";
