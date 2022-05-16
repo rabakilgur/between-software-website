@@ -3,7 +3,7 @@ import Head from "next/head";
 import React from "react";
 import * as ReactDOMClient from "react-dom/client";
 import { useEffect } from "react";
-import { Button } from "react-bootstrap";
+import { Button, Col, Form, Row } from "react-bootstrap";
 import Btn from "../components/btn/btn";
 import ThemeToggle from "../components/theme-toggle/theme-toggle";
 
@@ -273,33 +273,70 @@ const Design: NextPage = () => {
 							</div>
 
 							<h2 className="pt-4">Forms:</h2>
+							<i className="text-muted"><b>More info:</b> <a href="https://react-bootstrap.github.io/forms/form-control/" target="_blank">https://react-bootstrap.github.io/forms/form-control/</a> & <a href="https://getbootstrap.com/docs/5.1/forms/overview/" target="_blank">https://getbootstrap.com/docs/5.1/forms/overview/</a></i>
+							<div className="row">
+								<form className="pt-4 col-md-6">
+									<h3>Checkboxes:</h3>
+									<Form.Check id="custom-checkbox" label="Default checkbox input" />
+									<Form.Check id="custom-checkbox-checked" label="Checked checkbox input" defaultChecked />
+									<Form.Check id="custom-checkbox-disabled" label="Disabled checkbox input" disabled />
+									<Form.Check id="custom-checkbox-checked-disabled" label="Disabled checked checkbox input" defaultChecked  disabled />
+									<div className="pt-2">
+										<Form.Check id="custom-checkbox-inline-1" label="1" inline />
+										<Form.Check id="custom-checkbox-inline-2" label="2" inline />
+										<Form.Check id="custom-checkbox-inline-3" label="3" inline />
+									</div>
+								</form>
+								<form className="pt-4 col-md-6">
+									<h3>Switches:</h3>
+									<Form.Check type="switch" id="custom-switch" label="Default switch checkbox input" />
+									<Form.Check type="switch" id="custom-switch-checked" label="Checked switch checkbox input" defaultChecked />
+									<Form.Check type="switch" id="custom-switch-disabled" label="Disabled switch checkbox input" disabled />
+									<Form.Check type="switch" id="custom-switch-checked-disabled" label="Disabled checked switch checkbox input" defaultChecked  disabled />
+									<div className="pt-2">
+										<Form.Check type="switch" id="custom-checkbox-inline-1" label="1" inline />
+										<Form.Check type="switch" id="custom-checkbox-inline-2" label="2" inline />
+										<Form.Check type="switch" id="custom-checkbox-inline-3" label="3" inline />
+									</div>
+								</form>
+							</div>
 							<form className="pt-4">
 								<h3>Typical Form:</h3>
-								<div className="form-group row">
-									<label htmlFor="staticEmail" className="col-sm-2 col-form-label">Email</label>
-									<div className="col-sm-10">
-										<input type="text" className="form-control" />
-									</div>
-								</div>
-								<div className="form-group row mt-2">
-									<label htmlFor="inputPassword" className="col-sm-2 col-form-label">Passwort</label>
-									<div className="col-sm-10">
-										<input type="password" className="form-control"placeholder="Password" />
-									</div>
-								</div>
-								<div className="form-group row justify-content-end mt-2">
-									<div className="col-sm-10">
-										<input type="checkbox" className="form-check-input me-2" id="exampleCheck1" />
-										<label className="form-check-label" htmlFor="exampleCheck1">Zugangsdaten merken</label>
-									</div>
-								</div>
-								<div className="form-group row justify-content-end mt-3">
-									<div className="col-sm-10 btn-row">
+								<Form.Group as={Row} controlId="formPlaintextEmail">
+									<Form.Label column sm="2">Email</Form.Label>
+									<Col sm="10">
+										<Form.Control />
+									</Col>
+								</Form.Group>
+								<Form.Group as={Row} className="mt-2" controlId="exampleFormPassword">
+									<Form.Label column sm="2">Passwort</Form.Label>
+									<Col sm="10">
+										<Form.Control placeholder="Passwort" />
+									</Col>
+								</Form.Group>
+								<Form.Group as={Row} className="mt-2" controlId="exampleFormRole">
+									<Form.Label column sm="2">Rolle</Form.Label>
+									<Col sm="10">
+										<Form.Select>
+											<option value="0"></option>
+											<option value="1">Entwickler</option>
+											<option value="2">Tester</option>
+											<option value="3">Qualitätssicherung</option>
+										</Form.Select>
+									</Col>
+								</Form.Group>
+								<Form.Group as={Row} className="mt-2" controlId="exampleFormRememberPassword">
+									<Col sm={{ span: 10, offset: 2 }}>
+										<Form.Check label="Zugangsdaten merken" />
+									</Col>
+								</Form.Group>
+								<Form.Group className="mt-3">
+									<Col sm={{ span: 10, offset: 2 }} className="btn-row">
 										<Button type="submit">Senden</Button>
 										<Btn>Überspringen</Btn>
 										<Btn variant="outline-danger">Abbrechen</Btn>
-									</div>
-								</div>
+									</Col>
+								</Form.Group>
 							</form>
 						</div>
 					</div>

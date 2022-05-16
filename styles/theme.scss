@@ -74,9 +74,9 @@ html.dark-theme .light-theme {
 		.bg-gray-#{$i*100} {
 			background-color: var(--gray-#{$i*100}) !important;
 		}
-		@each $color-name, $color-value in map-merge($color-map-colors, $color-map-brand) {
-			.bg-#{$color-name} { background-color: #{$color-value} !important; }
-		}
+	}
+	@each $color-name, $color-value in map-merge($color-map-colors, $color-map-brand) {
+		.bg-#{$color-name} { background-color: #{$color-value} !important; }
 	}
 
 	// Buttons:
@@ -184,8 +184,13 @@ html.dark-theme .light-theme {
 	}
 
 	// Forms:
-	.form-control {
+	.form-control,
+	.form-select {
 		background-color: transparent;
+		&:hover,
+		&:focus {
+			background-color: rgba(0, 0, 0, 0.02)
+		}
 	}
 }
 
