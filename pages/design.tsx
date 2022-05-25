@@ -56,7 +56,7 @@ const Design: NextPage = () => {
 					</div>
 					<div className="col-lg-9 h-100 overflow-auto">
 						<div className="p-4">
-							<ThemeToggle className="btn btn-icon btn-secondary rounded-pill position-fixed end-0 bottom-0 mb-3 me-4 shadow-lg fs-2" />
+							{/* <ThemeToggle className="btn btn-icon btn-secondary rounded-pill position-fixed end-0 bottom-0 mb-3 me-4 shadow-lg fs-2" /> */}
 
 							<h1>Theme & Design Overview</h1>
 
