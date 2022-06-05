@@ -26,16 +26,21 @@ function App({ Component, pageProps }: AppProps) {
 	return (
 		<AppContext.Provider value={{ theme, setTheme }}>
 
-			<div className="shadow-sm">
-				<div className="pt-4 d-flex justify-content-between">
-					<h1></h1>
-					<h1 className="">Between-Software</h1>
-					<div className="pe-4">
+			<div className="shadow-sm d-flex justify-content-center">
+				<div className="pt-1 ps-1 d-flex col ">
+					<h3 className=""> Hier das Beetween logo </h3>
+				</div>
+				<div className="pt-5">
+				<button className="col">mock Contact</button>
+				<button className="col">mock Shop</button>
+				<button className="col">mock Design</button>
+				<button className="col">mock Playground</button>
+				</div>
+				<div className="col d-flex justify-content-end">
+					<h3 className="pt-5">{hostPathName}</h3>
+					<div className="pe-1 pt-1">
 						<ThemeToggle className="btn btn-icon btn-secondary rounded-pill" />
 					</div>
-				</div>
-				<div className="pe-4 d-flex justify-content-end">
-					<h2>{hostPathName}</h2>
 				</div>
 			</div>
 

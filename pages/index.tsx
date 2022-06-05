@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import FrontPage from "../components/frontpage/frontpage";
 
 const Home: NextPage = () => {
 	return (
@@ -7,10 +8,7 @@ const Home: NextPage = () => {
 			<Head>
 				<title>Between Software</title>
 			</Head>
-			<div className="p-4">
-				{/* <ThemeToggle className="btn btn-icon btn-secondary rounded-pill" /> */}
-				<h1 className="pt-4 text-center">In Arbeit...</h1>
-			</div>
+			<FrontPage />
 		</>
 	);
 };

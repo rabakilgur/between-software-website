@@ -1,0 +1,22 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+ <g id="Layer_1">
+  <title>Layer 1</title>
+  <rect id="svg_3" height="235" width="341" y="387" x="-39" stroke="#000" fill="#666666"/>
+  <rect id="svg_4" height="216" width="333" y="-18" x="-42" stroke="#000" fill="#666666"/>
+  <rect id="svg_5" height="252" width="370" y="-45" x="451" stroke="#000" fill="#666666"/>
+  <rect id="svg_7" height="34" width="20" y="611" x="470" opacity="NaN" stroke="#000" fill="#666666"/>
+  <rect id="svg_8" height="17" width="9" y="636" x="503" opacity="NaN" stroke="#000" fill="#666666"/>
+  <rect id="svg_9" height="258" width="351" y="385" x="478" stroke="#000" fill="#666666"/>
+  <line id="svg_10" y2="285" x2="81" y1="288" x1="39" stroke="#000" fill="none"/>
+  <line id="svg_11" y2="282" x2="216" y1="285" x1="168" stroke="#000" fill="none"/>
+  <line id="svg_12" y2="293" x2="361" y1="289" x1="324" stroke="#000" fill="none"/>
+  <line id="svg_13" y2="287" x2="500" y1="290" x1="458" stroke="#000" fill="none"/>
+  <line id="svg_14" y2="286" x2="701" y1="286" x1="652" stroke="#000" fill="none"/>
+  <line id="svg_15" y2="298" x2="801" y1="293" x1="774" stroke="#000" fill="none"/>
+  <line id="svg_16" y2="98" x2="368" y1="25" x1="370" stroke="#000" fill="none"/>
+  <line id="svg_17" y2="154" x2="369" y1="152" x1="369" stroke="#000" fill="none"/>
+  <line id="svg_18" y2="333" x2="384" y1="318" x1="384" stroke="#000" fill="none"/>
+  <line id="svg_19" y2="462" x2="384" y1="448" x1="383" stroke="#000" fill="none"/>
+  <line id="svg_20" y2="576" x2="397" y1="537" x1="395" stroke="#000" fill="none"/>
+ </g>
+</svg>
