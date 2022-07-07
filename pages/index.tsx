@@ -12,7 +12,7 @@ const Home: NextPage = () => {
 			</Head>
 			{/* <FrontPage /> */}
 			<Header />
-			<ThemeToggle className="btn btn-icon btn-secondary rounded-pill position-fixed end-0 bottom-0 mb-3 me-4 shadow-lg fs-2" />
+			<span id="top"></span>
 		</>
 	);
 };
