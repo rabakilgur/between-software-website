@@ -1,6 +1,6 @@
 // General:
 & {
-	--shade: --dark;
+	--shade: var(--dark, $dark);
 	--shade-rgb: var(--dark-rgb, $dark);
 	--shade-000: var(--black, $black);
 	--shade-100: var(--gray-900, $gray-900);
@@ -15,15 +15,17 @@
 	--shade-1000: var(--white, $white);
 }
 
+$dark-mode-bg: #1d1e1f;
+
 html,
 body {
-	background: $gray-900;
+	background: $dark-mode-bg;
 	color: $white;
 }
 
 // Utility:
 .bg-theme {
-	background: $gray-900 !important;
+	background: $dark-mode-bg !important;
 }
 .text-muted {
 	color: $gray-500 !important;

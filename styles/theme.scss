@@ -35,7 +35,7 @@ html,
 html.dark-theme .light-theme {
 	// Utility:
 	// Adding variables for the switching between light/dark shades in light-/dark-mode:
-	--shade: --dark;
+	--shade: var(--light, $light);
 	--shade-rgb: var(--light-rgb, $light);
 	--shade-000: var(--white, $white);
 	--shade-100: var(--gray-100, $gray-100);
