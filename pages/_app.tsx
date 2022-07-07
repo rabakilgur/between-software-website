@@ -15,18 +15,18 @@ export const AppContext = React.createContext({
 
 function App({ Component, pageProps }: AppProps) {
 	const [theme, setTheme] = useDarkMode();
-	const [hostPathName, setHostPathName] = useState("");
-	useEffect(() => {
-		if (typeof window !== "undefined") {
-			window.location.pathname == "/" ? 
-			setHostPathName("/home") : 
-			setHostPathName(location.pathname);
-		}
-	}, [])
+	// const [hostPathName, setHostPathName] = useState("");
+	// useEffect(() => {
+	// 	if (typeof window !== "undefined") {
+	// 		window.location.pathname == "/" ?
+	// 		setHostPathName("/home") :
+	// 		setHostPathName(location.pathname);
+	// 	}
+	// }, [])
 	return (
 		<AppContext.Provider value={{ theme, setTheme }}>
 
-			<div className="shadow-sm d-flex justify-content-center">
+			{/* <div className="shadow-sm d-flex justify-content-center">
 				<div className="pt-1 ps-1 d-flex col ">
 					<h3 className=""> Hier das Beetween logo </h3>
 				</div>
@@ -42,7 +42,7 @@ function App({ Component, pageProps }: AppProps) {
 						<ThemeToggle className="btn btn-icon btn-secondary rounded-pill" />
 					</div>
 				</div>
-			</div>
+			</div> */}
 
 			<Component {...pageProps} />
 		</AppContext.Provider>

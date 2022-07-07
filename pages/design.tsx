@@ -32,10 +32,10 @@ const Design: NextPage = () => {
 		});
 		if (!toc) toc = ReactDOMClient.createRoot(document.getElementById("toc")!);
 		toc.render([...document.querySelectorAll("h2")].map((h2, i) =>
-			<span key={`H2-${i}`}><a href={`#${h2.id}`}><h5 className="mt-2">{h2.textContent?.replace(":", "")}</h5></a>
+			<span key={`H2-${i}`}><a href={`#${h2.id}`} className="text-decoration-none" style={{ color: "var(--shade-900)" }}><h5 className="mt-2">{h2.textContent?.replace(":", "")}</h5></a>
 				<ul>
 					{getSubHeadings(h2).map((h3, j) =>
-						<li key={`H3-${j}`}><a href={`#${h3.id}`}>{h3.textContent?.replace(":", "")}</a></li>
+						<li key={`H3-${j}`}><a href={`#${h3.id}`} className="text-decoration-none" style={{ color: "var(--shade-800)" }}>{h3.textContent?.replace(":", "")}</a></li>
 					)}
 				</ul>
 			</span>
@@ -56,7 +56,7 @@ const Design: NextPage = () => {
 					</div>
 					<div className="col-lg-9 h-100 overflow-auto">
 						<div className="p-4">
-							{/* <ThemeToggle className="btn btn-icon btn-secondary rounded-pill position-fixed end-0 bottom-0 mb-3 me-4 shadow-lg fs-2" /> */}
+							<ThemeToggle className="btn btn-icon btn-secondary rounded-pill position-fixed end-0 bottom-0 mb-3 me-4 shadow-lg fs-2" />
 
 							<h1>Theme & Design Overview</h1>
 
@@ -273,7 +273,7 @@ const Design: NextPage = () => {
 							</div>
 
 							<h2 className="pt-4">Forms:</h2>
-							<i className="text-muted"><b>More info:</b> <a href="https://react-bootstrap.github.io/forms/form-control/" target="_blank">https://react-bootstrap.github.io/forms/form-control/</a> & <a href="https://getbootstrap.com/docs/5.1/forms/overview/" target="_blank">https://getbootstrap.com/docs/5.1/forms/overview/</a></i>
+							<i className="text-muted"><b>More info:</b> <a href="https://react-bootstrap.github.io/forms/form-control/" target="_blank" rel="noreferrer">https://react-bootstrap.github.io/forms/form-control/</a> & <a href="https://getbootstrap.com/docs/5.1/forms/overview/" target="_blank" rel="noreferrer">https://getbootstrap.com/docs/5.1/forms/overview/</a></i>
 							<div className="row">
 								<form className="pt-4 col-md-6">
 									<h3>Checkboxes:</h3>
