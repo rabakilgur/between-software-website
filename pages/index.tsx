@@ -13,10 +13,10 @@ const Home: NextPage = () => {
 				<title>Between Software</title>
 			</Head>
 			{/* <FrontPage /> */}
-			<Header />
-			<span id="top"></span>
+			<Header dynamicBg blowOutLogo />
+			<span id="start"></span>
 			<Container className="position-relative">
-				<img src="./between_frontpage_bg.png" width="60%" className="position-absolute end-0 m-3" />
+				<img src="./between_frontpage_bg.png" width="60%" className="position-absolute end-0 m-3" style={{ top: "80px" }} />
 			</Container>
 			<Container>
 				<div style={{ height: "400px" }}></div>

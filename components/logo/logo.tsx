@@ -1,7 +1,7 @@
 export default function Logo(props) {
 	const { width, height, color } = props;
 	return (
-		<svg id="b5d1e271-ef6b-4497-b2e3-89d5c43fff90" data-name="between_logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1452.69 244.11" style={{ width: width ?? "100%", height: height ?? "100%" }}>
+		<svg id="b5d1e271-ef6b-4497-b2e3-89d5c43fff90" data-name="between_logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1452.69 244.11" {...props} style={{ width: width ?? "100%", height: height ?? "100%" }}>
 			<path
 				d="M1451.93,119.72l-37-51.37a4,4,0,0,1-.75-2.34V4a4,4,0,0,0-4-4h-37a4,4,0,0,0-4,4V80.52a4,4,0,0,0,.75,2.33l28.2,39.2-28.2,39.2a4,4,0,0,0-.75,2.34v76.52a4,4,0,0,0,4,4h37a4,4,0,0,0,4-4v-62a4,4,0,0,1,.75-2.33l37-51.37A4,4,0,0,0,1451.93,119.72Z"
 				style={{ fill: "#08f" }}

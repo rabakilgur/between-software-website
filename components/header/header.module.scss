@@ -4,13 +4,15 @@
 
 .header {
 	user-select: none;
-	// &:global(.navbar-dark) :global(.navbar-nav .nav-link) {
-	// 	color: $gray-200;
-
-	// }
-	// &:global(.navbar-light) :global(.navbar-nav .nav-link) {
-	// 	color: $gray-800;
-	// }
+	backdrop-filter: blur(20px);
+	transition: background-color 0.2s ease-out;
+	:global(#header-logo) {
+		transform-origin: top left;
+		transition: transform 0.2s ease-out;
+		&.blownOutLogo {
+			transform: translate(20px, 60px) scale(1.6);
+		}
+	}
 	:global(.navbar-nav .nav-link) {
 		color: var(--shade-800);
 		&::before,
