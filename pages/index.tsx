@@ -18,6 +18,23 @@ const Home: NextPage = () => {
 			<Container className="position-relative">
 				<img src="./between_frontpage_bg.png" width="60%" className="position-absolute end-0 m-3" />
 			</Container>
+			<Container>
+				<div style={{ height: "400px" }}></div>
+				<p>Lorem Ipsum</p>
+				<div style={{ height: "400px" }}></div>
+				<p>Lorem Ipsum</p>
+				<div style={{ height: "400px" }}></div>
+				<p>Lorem Ipsum</p>
+				<div style={{ height: "400px" }}></div>
+				<p>Lorem Ipsum</p>
+				<div style={{ height: "400px" }}></div>
+				<p>Lorem Ipsum</p>
+				<div style={{ height: "400px" }}></div>
+				<p>Lorem Ipsum</p>
+				<div style={{ height: "400px" }}></div>
+				<p>Lorem Ipsum</p>
+				<div style={{ height: "400px" }}></div>
+			</Container>
 		</>
 	);
 };

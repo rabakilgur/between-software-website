@@ -48,6 +48,10 @@
 
 .headerFlex {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
+}
+
+.headerItem {
+	padding: 0.5rem 1rem;
 }
