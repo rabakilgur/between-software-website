@@ -20,7 +20,7 @@ export default function Header(props) {
 
 	useEffect(() => { window.onscroll = handleScroll }, []);
 
-	const handleDynamicBg = () => {
+	const handleDynamicBg = async () => {
 		// When the user scrolls down 50px from the top of the document:
 		if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
 			document.getElementById("header")!.style.backgroundColor = themeMode === "dark" ? "#232527cc" : "#ebeceecc";
@@ -28,7 +28,7 @@ export default function Header(props) {
 			document.getElementById("header")!.style.backgroundColor = "transparent";
 		}
 	}
-	const handleBlowOutLogo = () => {
+	const handleBlowOutLogo = async () => {
 		// When the user scrolls down 50px from the top of the document:
 		if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
 			document.getElementById("header-logo")!.classList.remove(S.blownOutLogo);
