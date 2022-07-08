@@ -11,7 +11,7 @@ export default function Header(props) {
 	const { theme, setTheme } = useContext(AppContext);
 
 	return (
-		<Navbar bg={theme ?? "dark"} variant={theme ?? "dark"} className={S.header}>
+		<Navbar bg={theme ?? "light"} variant={theme ?? "light"} className={S.header}>
 			<Container>
 				<Navbar.Brand href="#top">
 					<Logo width="60%" color="var(--shade-900)" />
