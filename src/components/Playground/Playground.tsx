@@ -2,7 +2,7 @@ import { useEffect, useId, useRef, useState } from "react";
 import S from "./Playground.module.scss";
 import C from "classnames";
 
-export default function Playground() {
+export default function Playground({ path }: { path: string }) {
 
     const [rows, setRows] = useState(3);
     const [coloums, setColoums] = useState(3);

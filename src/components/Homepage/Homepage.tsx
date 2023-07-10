@@ -1,7 +1,7 @@
 import "../../style/index.scss";
 import DarkModeToggleCornerWrapper from "../DarkModeToggle/DarkModeToggleCornerWrapper";
 
-const Homepage = () => {
+const Homepage = ({ path }: { path: string }) => {
 	return (
 		<>
 			<DarkModeToggleCornerWrapper />
