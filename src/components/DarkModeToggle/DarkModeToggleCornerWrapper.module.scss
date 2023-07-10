@@ -1,0 +1,13 @@
+// @type
+
+.wrapper {
+	position: fixed;
+	z-index: 40; // behind modals which are at z-index 50
+	top: 10px;
+	right: 26px;
+}
+.toggle {
+	background-color: hsl(var(--nextui-default-300) / 0.5);
+	-webkit-backdrop-filter: blur(12px);
+	backdrop-filter: blur(12px);
+}
