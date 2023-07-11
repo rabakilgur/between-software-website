@@ -54,8 +54,8 @@ export default function Tooltip({
 	});
 
 	useEffect(() => {
-		let renderedTimeout: number;
-		let actuallyVisibleTimeout: number;
+		let renderedTimeout: number | NodeJS.Timeout;
+		let actuallyVisibleTimeout: number | NodeJS.Timeout;
 		if (visible) {
 			setRendered(true);
 			actuallyVisibleTimeout = setTimeout(() => setActuallyVisible(true), Math.max(delay ?? 100, 1));

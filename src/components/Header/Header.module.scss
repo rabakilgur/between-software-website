@@ -1,0 +1,54 @@
+// @type
+
+.header {
+	user-select: none;
+	background-color: hsla(var(--nextui-foreground) / 2.5%);
+	transition: background-color 0.2s ease-out,
+	            border-color 0.2s ease-out;
+	&.headerSeamless {
+		background-color: transparent;
+		border-color: transparent;
+	}
+	:global(#header-logo) {
+		transform-origin: top left;
+		transition: transform 0.2s ease-out;
+		&.blownOutLogo {
+			transform: translate(20px, 70px) scale(1.9);
+		}
+	}
+	.headerItem {
+		position: relative;
+		padding-inline: 0.5rem;
+		&::before,
+		&::after {
+			position: absolute;
+			color: #08f;
+			font-size: 1.1em;
+			font-weight: bold;
+			margin-top: -0.1em;
+			opacity: 0;
+			transition: opacity 0.25s ease,
+						transform 0.5s cubic-bezier(0.32, 0, 0.67, 0);
+		}
+		&::before {
+			content: "{";
+			right: calc(100% - 5px);
+			transform: translateX(-6px);
+		}
+		&::after {
+			content: "}";
+			left: calc(100% - 5px);
+			transform: translateX(6px);
+		}
+		&:hover {
+			&::before,
+			&::after {
+				opacity: 1;
+				transform: translateX(0px);
+				transition: opacity 0.4s ease,
+							transform 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+			}
+		}
+	}
+}
+
