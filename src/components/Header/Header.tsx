@@ -6,7 +6,7 @@ import C from "classnames";
 import { useEffect, useState } from "preact/hooks";
 import "../../style/index.scss";
 import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
-import Logo from "../Logo/logo";
+import Logo from "../Logo/Logo";
 import S from "./Header.module.scss";
 
 const HeaderItem = (props: any) => <span className={S.headerItem}><Link {...props}>{props.children}</Link></span>;

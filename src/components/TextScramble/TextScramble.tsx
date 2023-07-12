@@ -19,7 +19,7 @@ export default function ScrambleText(
 	const targetChars = scrambleStates[(currentPhraseIndex + 1) % scrambleStates.length];
 	const [currentChars, setCurrentChars] = useState(scrambleStates[0]);
 	const renderRef = useRef<() => void>(() => {});
-	let intermediateTimeout: number;
+	let intermediateTimeout: number | NodeJS.Timeout;
 	let animationFrame: number;
 
 	const render = () => {
